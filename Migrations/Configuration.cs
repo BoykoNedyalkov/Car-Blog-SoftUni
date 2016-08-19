@@ -74,12 +74,12 @@ namespace MVCBlog.Migrations
                     body: @"<p>Version 2.8 of the open-source distributed version-control system Git has been released. The new edition provides a variety of new features, bugfixes and other improvements.</p>
                     <p>According to GitHub, the most notable new features include:</p>
                     <ul>
-                    <li><strong>Parallel fetches of submodules:</strong> ìUsing ëgit submodules,í one Git repository can include other Git repositories as subdirectories. This can be a useful way to include libraries or other external dependencies into your main project. The top-level repository specifies which submodules it wants to include, and which version of each submodule,î wrote Jeff King, a Git team member, in a <a href=""https://github.com/blog/2131-git-2-8-has-been-released"">blog post</a>. According to him, if users have multiple submodules, fetches can be time-consuming. The latest release allows users to fetch from multiple submodules in parallel.</li>
-                    <li><strong>Donít guess my identity: </strong>Instead of using one e-mail address for all of a userís open-source projects, they can now tell Git what user name and e-mail they want to use before they commit.</li>
-                    <li><strong>Convergences with Git for Windows:</strong> The Git team has been working on making Git as easy to work with on Windows as it is on Linux and OS X. The latest release includes Git commands rewritten in C; Windows-specific changes from the Git for Windows project; and the ability to accept both LF and CRLF line endings. ìThis continuing effort will make it easier to keep the functionality of Git in sync across platforms as new features are added,î King wrote.</li>
+                    <li><strong>Parallel fetches of submodules:</strong> ‚ÄúUsing ‚Äògit submodules,‚Äô one Git repository can include other Git repositories as subdirectories. This can be a useful way to include libraries or other external dependencies into your main project. The top-level repository specifies which submodules it wants to include, and which version of each submodule,‚Äù wrote Jeff King, a Git team member, in a <a href=""https://github.com/blog/2131-git-2-8-has-been-released"">blog post</a>. According to him, if users have multiple submodules, fetches can be time-consuming. The latest release allows users to fetch from multiple submodules in parallel.</li>
+                    <li><strong>Don‚Äôt guess my identity: </strong>Instead of using one e-mail address for all of a user‚Äôs open-source projects, they can now tell Git what user name and e-mail they want to use before they commit.</li>
+                    <li><strong>Convergences with Git for Windows:</strong> The Git team has been working on making Git as easy to work with on Windows as it is on Linux and OS X. The latest release includes Git commands rewritten in C; Windows-specific changes from the Git for Windows project; and the ability to accept both LF and CRLF line endings. ‚ÄúThis continuing effort will make it easier to keep the functionality of Git in sync across platforms as new features are added,‚Äù King wrote.</li>
                     <li><strong>Security fixes: </strong>Git 2.8 addresses the vulnerability CVE-2016-2324. There have not been any reported exploits, but the vulnerability could execute arbitrary code when cloning a malicious repository, according to King.</li>
                     </ul>
-                    <p>Other features include the ability to turn off Gitís clean and smudge filters; the ability to see where a particular setting came from; the ability to easily diagnose end-of-line problems; the ability to see a remote repositoryís default branch; and support for cloning via the rsync protocol has been dropped.</p>
+                    <p>Other features include the ability to turn off Git‚Äôs clean and smudge filters; the ability to see where a particular setting came from; the ability to easily diagnose end-of-line problems; the ability to see a remote repository‚Äôs default branch; and support for cloning via the rsync protocol has been dropped.</p>
                     <p>The full release notes are available <a href=""https://github.com/git/git/blob/v2.8.0/Documentation/RelNotes/2.8.0.txt"">here</a>.</p>",
                     date: new DateTime(2016, 04, 11, 19, 02, 05),
                     authorUsername: "geshu@gmail.com"
@@ -88,10 +88,10 @@ namespace MVCBlog.Migrations
                 CreatePost(context,
                     title: "Rogue Wave Updates Zend Framework",
                     body: @"<p>Rogue Wave is updating its open-source framework for developing Web applications and services. According to the company, this is the first major release in four years. Zend Framework 3 features support for PHP 7, middleware runtime and performance enhancements.</p>
-                    <p>The newly released support for PHP 7 aims to simplify how developers create, debug, monitor and deploy modern Web and mobile apps in PHP 7. ìThis is an exciting time to be a PHP developer,î said Zeev Suraski, cofounder of Zend and CTO of Rogue Wave. ìWith Zend Framework 3, weíre continuing our quest to make creating PHP applications simpler, more accessible and faster.î</p>
+                    <p>The newly released support for PHP 7 aims to simplify how developers create, debug, monitor and deploy modern Web and mobile apps in PHP 7. ‚ÄúThis is an exciting time to be a PHP developer,‚Äù said Zeev Suraski, cofounder of Zend and CTO of Rogue Wave. ‚ÄúWith Zend Framework 3, we‚Äôre continuing our quest to make creating PHP applications simpler, more accessible and faster.‚Äù</p>
                     <p>In addition, version 3 of the framework features an architectural structure that allows developers to use components within Zend Framework apps or any other framework in order to reduce dependencies, and to enable reuse within the PHP ecosystem.</p>
                     <p>Another key update to the solution is a new middleware runtime. Expressive is designed to focus on simplicity and interoperability, and it enables developers to customize their solutions.</p>
-                    <p>ìIím extremely proud of the work weíve done with Expressive,î said Matthew Weier OíPhinney, principal engineer and Zend Framework project lead at Rogue Wave. ìExpressive signals the future of PHP applications, composed of layered, single-purpose PSR-7 middleware.î</p>",
+                    <p>‚ÄúI‚Äôm extremely proud of the work we‚Äôve done with Expressive,‚Äù said Matthew Weier O‚ÄôPhinney, principal engineer and Zend Framework project lead at Rogue Wave. ‚ÄúExpressive signals the future of PHP applications, composed of layered, single-purpose PSR-7 middleware.‚Äù</p>",
                     date: new DateTime(2016, 06, 30, 17, 36, 52),
                     authorUsername: "merry@gmail.com"
                 );
@@ -100,24 +100,24 @@ namespace MVCBlog.Migrations
                     url: @" http://www.topgear.com/sites/default/files/styles/fit_1960x1102/public/images/news-article/carousel/2016/02/ff21a0e4ae2274ad672c3402bf360e46/7mercc43coupefeb16.jpg?itok=__MERSSW",
                     description: null);
                 CreateGalleryCar(context,
-                    title: "Mercedes AMG",
-                    url: @" http://www.topgear.com/sites/default/files/styles/fit_1960x1102/public/images/news-article/carousel/2016/02/ff21a0e4ae2274ad672c3402bf360e46/7mercc43coupefeb16.jpg?itok=__MERSSW",
+                    title: "Alfa Romeo 4C Coupe",
+                    url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/Alfa%20Romeo%204C.jpg",
                     description: null);
                 CreateGalleryCar(context,
-                    title: "Mercedes AMG",
-                    url: @" http://www.topgear.com/sites/default/files/styles/fit_1960x1102/public/images/news-article/carousel/2016/02/ff21a0e4ae2274ad672c3402bf360e46/7mercc43coupefeb16.jpg?itok=__MERSSW",
+                    title: "BMW 5-Series",
+                    url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/BMW-5_series_F10_mp2_pic_70917.jpg",
                     description: null);
                 CreateGalleryCar(context,
-                    title: "Mercedes AMG",
-                    url: @" http://www.topgear.com/sites/default/files/styles/fit_1960x1102/public/images/news-article/carousel/2016/02/ff21a0e4ae2274ad672c3402bf360e46/7mercc43coupefeb16.jpg?itok=__MERSSW",
+                    title: "Cadillac CTS 2017",
+                    url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/Cadillac-CTS-079.jpg",
                     description: null);
                 CreateGalleryCar(context,
-                    title: "Mercedes AMG",
-                    url: @" http://www.topgear.com/sites/default/files/styles/fit_1960x1102/public/images/news-article/carousel/2016/02/ff21a0e4ae2274ad672c3402bf360e46/7mercc43coupefeb16.jpg?itok=__MERSSW",
+                    title: "Volov S90",
+                    url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/volvo-s90-2016-front.jpg",
                     description: null);
                 CreateGalleryCar(context,
-                    title: "Mercedes AMG",
-                    url: @" http://www.topgear.com/sites/default/files/styles/fit_1960x1102/public/images/news-article/carousel/2016/02/ff21a0e4ae2274ad672c3402bf360e46/7mercc43coupefeb16.jpg?itok=__MERSSW",
+                    title: "Mercedes SLS",
+                    url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/mercedesbenz-sls-amg-1.jpg",
                     description: null);
 
 
