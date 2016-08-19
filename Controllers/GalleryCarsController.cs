@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MvcBlog.Models;
+using MvcBlog.ViewModel;
 
 namespace MvcBlog.Controllers
 {
@@ -15,10 +16,14 @@ namespace MvcBlog.Controllers
     {
 
         private ApplicationDbContext db = new ApplicationDbContext();
+        
 
         // GET: GalleryCars
         public ActionResult Index()
         {
+            var cars = db.GalleryCars.Include(g => g.Id);
+            var carLinks = db.GalleryCars.Include(g =>g.Id);
+            this.ViewBag.CarLinks = carLinks;
             return View(db.GalleryCars.ToList());
         }
 
@@ -34,7 +39,13 @@ namespace MvcBlog.Controllers
             {
                 return HttpNotFound();
             }
-            return View(galleryCar);
+            var myViewModel = new GalleryCarViewModel();
+            var lastItem = db.GalleryCars.OrderByDescending(x => x.Id).First();
+            var firstItem = db.GalleryCars.OrderBy(x => x.Id).First();
+            myViewModel.lastItemID = lastItem.Id;
+            myViewModel.firstItemID = firstItem.Id;
+            myViewModel.Car = galleryCar;
+            return View(myViewModel);
         }
 
         // GET: GalleryCars/Create
@@ -107,6 +118,7 @@ namespace MvcBlog.Controllers
             }
             return View(galleryCar);
         }
+        
 
         // POST: GalleryCars/Delete/5
         [HttpPost, ActionName("Delete")]
@@ -118,6 +130,7 @@ namespace MvcBlog.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        
 
         protected override void Dispose(bool disposing)
         {
