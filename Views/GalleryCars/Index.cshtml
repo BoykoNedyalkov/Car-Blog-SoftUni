@@ -1,4 +1,7 @@
-﻿@model IEnumerable<MvcBlog.Models.GalleryCar>
+@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<MvcBlog.Models.GalleryCar>
+
 
 @{
     ViewBag.Title = "Index";
@@ -9,51 +12,33 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-@*
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
-</table>
-*@
 
 
 <div class="row">
     @foreach (var item in Model)
     {
-
         <div class="col-xs-6 col-md-4">
             <h2 class="title">@item.Title</h2>
-            <div class="body" >
-                <img src=@Html.Raw(item.URL) height="300" width="300">
+            <div class="body">
+                <a href="@Url.Action("Details", new { id=item.Id })">
+                    <img class="img-responsive img-rounded" src=@Html.Raw(item.URL)>
+                </a>
             </div>
             @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
             @Html.ActionLink("Details", "Details", new { id = item.Id }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.Id })
         </div>
-    
+
     }
+</div>
+
+<div class="col-sm-10">
+    <div class="center">
+        <a>
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page, pageSize = Model.PageSize }))
+            Showing @Model.FirstItemOnPage to @Model.LastItemOnPage
+            of @Model.TotalItemCount galleryCars
+        </a>
+        <br />
+    </div>
 </div>
