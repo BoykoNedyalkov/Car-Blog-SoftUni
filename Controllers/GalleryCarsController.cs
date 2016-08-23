@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -46,9 +46,14 @@ namespace MvcBlog.Controllers
             var myViewModel = new GalleryCarViewModel();
             var lastItem = db.GalleryCars.OrderByDescending(x => x.Id).First();
             var firstItem = db.GalleryCars.OrderBy(x => x.Id).First();
+            //Added - 23.08.2016
+            string details = galleryCar.Details;
             myViewModel.lastItemID = lastItem.Id;
             myViewModel.firstItemID = firstItem.Id;
             myViewModel.Car = galleryCar;
+            //Added - 23.08.2016
+            myViewModel.Car.Details = details;
+            
             return View(myViewModel);
         }
 
