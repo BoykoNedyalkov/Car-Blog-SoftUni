@@ -1,4 +1,4 @@
-﻿@model MvcBlog.Models.GalleryCar
+@model MvcBlog.ViewModel.GalleryCarViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -9,26 +9,43 @@
 <div>
     <h4>GalleryCar</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
+    @*
+    
+        *@
+    <div class="row">
+        <div class="col-xs-1 col-md-2">
+            @if (Model.Car.Id != Model.firstItemID)
+            {
+                @Html.ActionLink("Previous", "Details", new { id = Model.Car.Id - 1 }, new { @class = "btn btn-primary", @style = "color:white" })
+            }
+            else
+            {
+                <button class="btn btn-default" style="color:black">Previous</button>               
+            }
+        </div>
+        <div class="col-xs-6 col-md-8">
+            <h2 class="title">@Model.Car.Title</h2>
+            <div class="body">
 
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
+                <img class="img-responsive img-rounded" src=@Html.Raw(Model.Car.URL)>
+                <p>
+                    @Model.Car.Details
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.Car.Id }) |
+                    @Html.ActionLink("Back to List", "Index")
+                </p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-    </dl>
+        </div>
+        <div class="col-xs-1 col-md-2">
+            @if (Model.Car.Id != Model.lastItemID)
+            {
+                @Html.ActionLink("Next", "Details", new { id = Model.Car.Id + 1 }, new { @class = "btn btn-primary", @style = "color:white" })
+            }
+            else
+            {
+                <button class="btn btn-default" style="color:black">Next</button>
+            }
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
