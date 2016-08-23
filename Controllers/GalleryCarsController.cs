@@ -18,7 +18,7 @@ namespace MvcBlog.Controllers
     {
 
         private ApplicationDbContext db = new ApplicationDbContext();
-        
+
 
         // GET: GalleryCars
         public ActionResult Index(int page = 1, int pageSize = 3)
@@ -46,14 +46,11 @@ namespace MvcBlog.Controllers
             var myViewModel = new GalleryCarViewModel();
             var lastItem = db.GalleryCars.OrderByDescending(x => x.Id).First();
             var firstItem = db.GalleryCars.OrderBy(x => x.Id).First();
-            //Added - 23.08.2016
             string details = galleryCar.Details;
             myViewModel.lastItemID = lastItem.Id;
             myViewModel.firstItemID = firstItem.Id;
             myViewModel.Car = galleryCar;
-            //Added - 23.08.2016
-            myViewModel.Car.Details = details;
-            
+            myViewModel.Car.Details = details; 
             return View(myViewModel);
         }
 
