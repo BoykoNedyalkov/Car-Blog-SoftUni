@@ -30,97 +30,148 @@ namespace MVCBlog.Migrations
                 AddUserToRole(context, "admin@gmail.com", "Administrators");
 
                 CreatePost(context,
-                    title: "Work Begins on HTML5.1",
-                    body: @"<p>The World Wide Web Consortium (W3C) has begun work on <b>HTML5.1</b>, and this time it is handling the creation of the standard a little differently. The specification has its <b><a href=""https://w3c.github.io/html/"">own GitHub project</a></b> where anyone can see what is happening and propose changes.</p>
-                    <p>The organization says the goal for the new specification is ""to <b>match reality better</b>, to make the specification as clear as possible to readers, and of course to make it possible for all stakeholders to propose improvements, and understand what makes changes to HTML successful.""</p>
-                    <p>Creating HTML5 took years, but W3C hopes using GitHub will speed up the process this time around. It plans to release a candidate recommendation for HTML5.1 by <b>June</b> and a full recommendation in <b>September</b>.</p>",
+                    title: "Hyundai says it's discussing partnerships with Google",
+                    body: @"SEOUL -- Hyundai Motor is in discussions with Google about further partnerships
+                        as the automaker seeks external expertise to remain competitive. The two companies have some
+                        common areas that may require cooperation, Hyundai Motor President Jeong Jin Haeng said after
+                        a meeting between the trade ministry and local automakers. Hyundai has been among the most 
+                        active automakers adopting Apple's CarPlay and Google parent Alphabet's Android Auto, 
+                        which integrate iPhone and Android handsets with car dashboards. Jeong didn't give further
+                        details or confirm if the automaker is considering developing autonomous cars with Google.",
                     date: new DateTime(2016, 03, 27, 17, 53, 48),
                     authorUsername: "merry@gmail.com"
                 );
 
                 CreatePost(context,
-                    title: "Windows 10 Preview with Bash Support Now Available",
-                    body: @"<p>Microsoft has released a new <b>Windows 10 Insider Preview</b> that includes native support for <b>Bash running on Ubuntu Linux</b>. The company first announced the new feature at last week''s Build development conference, and it was one of the biggest stories of the event. The current process for installing Bash is a little complication, but Microsoft has a blog post that explains how the process works.</p>
-                    <p>The preview build also includes <b>Cortana</b> upgrades, extensions support, the new <b>Skype</b> Universal Windows Platform app and some interface improvements.</p>",
+                    title: "Ford to make autonomous cars for ride-hailing, ride-sharing by 2021",
+                    body: @"Ford Motor Co. today said it plans to introduce an autonomous vehicle by 2021 for
+                            use in a ride-hailing or ride-sharing service. Ford said the vehicle would be “specifically
+                            designed for commercial mobility services” and built in high volumes. “Ford is going to be 
+                            mass-producing vehicles with full autonomy in five years,” CEO Mark Fields said at an event
+                            in Silicon Valley that was broadcast online. “There’s going to be no steering wheel, there’s
+                            not going to be a gas pedal, there’s not going to be a brake pedal and of course a driver is
+                            not going to be required.",
                     date: new DateTime(2016, 05, 11, 08, 22, 03),
                     authorUsername: "merry@gmail.com"
                 );
 
                 CreatePost(context,
-                    title: "Atom Text Editor Gets New Windows Features",
-                    body: @"<p>GitHub has released <b>Atom 1.7</b>, and the updated version of the text editor offers improvements for Windows developers. Specifically, it is now easier to build in Visual Studio, and it now supports the Appveyor CI continuous integration service for Windows.</p>
-                    <p>Other new features include improved tab switching, tree view and crash recovery. GitHub noted, ""Crashes are nobody''s idea of fun, but in case Atom does crash on you, it periodically saves your editor state. After relaunching Atom after a crash, you should find all your work saved and ready to go.""</p>
-                    <p>GitHub has also released a beta preview of Atom 1.8.</p>",
+                    title: "Cadillac readies concept for Pebble Beach showing",
+                    body: @"Cadillac plans to introduce a concept vehicle at this year's Pebble Beach Concours d'Elegance.
+                            Cadillac isn't saying if the concept is an SUV, crossover or new sporty car.",
                     date: new DateTime(2016, 03, 27, 17, 53, 48),
                     authorUsername: "merry@gmail.com"
                 );
 
                 CreatePost(context,
-                    title: "SoftUni 3.0 Just Launched",
-                    body: @"<p>The <b>Software University (SoftUni)</b> launched a new training methodology and training program for software engineers in Sofia.</p>
-                    <p>It is a big step ahead. Now SoftUni offers several professions:</p>
-                    <ul>
-                      <li>PHP Developer</li>
-                      <li>JavaScript Developer</li>
-                      <li>C# Web Developer</li>
-                      <li>Java Web Developer</li>
-                    </ul>",
+                    title: "For automakers, Detroit's Dream Cruise should be prime turf to recruit engineers, designers.",
+                    body: @"Earlier this year, Automotive News launched a new publication, Fixed Ops Journal, which
+                            covers the issues facing managers of the parts, body shop and service departments at new-car dealerships.
+                            One central theme that appears over and over again in the magazine, as well as in Automotive News’
+                            reporting on the auto industry, is that from the new-car dealer to the manufacturer -- and suppliers,
+                            too -- everyone needs more help. Few companies, it seems, can find enough new employees to design, develop
+                            and engineer tomorrow’s vehicles, advanced powertrains and components. New-car dealers have been in constant
+                            need of technicians for 20 years. Suppliers need every discipline from battery experts to chemists to code
+                            writers.",
                     date: new DateTime(2016, 02, 18, 22, 14, 38),
                     authorUsername: "pesho@gmail.com"
                 );
 
                 CreatePost(context,
-                    title: "Git 2.8 Adds Security and Productivity Features",
-                    body: @"<p>Version 2.8 of the open-source distributed version-control system Git has been released. The new edition provides a variety of new features, bugfixes and other improvements.</p>
-                    <p>According to GitHub, the most notable new features include:</p>
-                    <ul>
-                    <li><strong>Parallel fetches of submodules:</strong> “Using ‘git submodules,’ one Git repository can include other Git repositories as subdirectories. This can be a useful way to include libraries or other external dependencies into your main project. The top-level repository specifies which submodules it wants to include, and which version of each submodule,” wrote Jeff King, a Git team member, in a <a href=""https://github.com/blog/2131-git-2-8-has-been-released"">blog post</a>. According to him, if users have multiple submodules, fetches can be time-consuming. The latest release allows users to fetch from multiple submodules in parallel.</li>
-                    <li><strong>Don’t guess my identity: </strong>Instead of using one e-mail address for all of a user’s open-source projects, they can now tell Git what user name and e-mail they want to use before they commit.</li>
-                    <li><strong>Convergences with Git for Windows:</strong> The Git team has been working on making Git as easy to work with on Windows as it is on Linux and OS X. The latest release includes Git commands rewritten in C; Windows-specific changes from the Git for Windows project; and the ability to accept both LF and CRLF line endings. “This continuing effort will make it easier to keep the functionality of Git in sync across platforms as new features are added,” King wrote.</li>
-                    <li><strong>Security fixes: </strong>Git 2.8 addresses the vulnerability CVE-2016-2324. There have not been any reported exploits, but the vulnerability could execute arbitrary code when cloning a malicious repository, according to King.</li>
-                    </ul>
-                    <p>Other features include the ability to turn off Git’s clean and smudge filters; the ability to see where a particular setting came from; the ability to easily diagnose end-of-line problems; the ability to see a remote repository’s default branch; and support for cloning via the rsync protocol has been dropped.</p>
-                    <p>The full release notes are available <a href=""https://github.com/git/git/blob/v2.8.0/Documentation/RelNotes/2.8.0.txt"">here</a>.</p>",
+                    title: "Nissan to dangle 5-year, 100,000-mile warranty on 2017 Titan lineup",
+                    body: @"Nissan will offer a five-year/100,000-mile, bumper-to-bumper warranty on the 2017 Titan
+                            as it prepares to launch two new, volume variants of the large pickup. With the expanded warranty,
+                            Nissan hopes the Titan, still unfamiliar to many pickup buyers, will garner more consideration from
+                            truck shoppers.",
                     date: new DateTime(2016, 04, 11, 19, 02, 05),
                     authorUsername: "geshu@gmail.com"
                 );
 
                 CreatePost(context,
-                    title: "Rogue Wave Updates Zend Framework",
-                    body: @"<p>Rogue Wave is updating its open-source framework for developing Web applications and services. According to the company, this is the first major release in four years. Zend Framework 3 features support for PHP 7, middleware runtime and performance enhancements.</p>
-                    <p>The newly released support for PHP 7 aims to simplify how developers create, debug, monitor and deploy modern Web and mobile apps in PHP 7. “This is an exciting time to be a PHP developer,” said Zeev Suraski, cofounder of Zend and CTO of Rogue Wave. “With Zend Framework 3, we’re continuing our quest to make creating PHP applications simpler, more accessible and faster.”</p>
-                    <p>In addition, version 3 of the framework features an architectural structure that allows developers to use components within Zend Framework apps or any other framework in order to reduce dependencies, and to enable reuse within the PHP ecosystem.</p>
-                    <p>Another key update to the solution is a new middleware runtime. Expressive is designed to focus on simplicity and interoperability, and it enables developers to customize their solutions.</p>
-                    <p>“I’m extremely proud of the work we’ve done with Expressive,” said Matthew Weier O’Phinney, principal engineer and Zend Framework project lead at Rogue Wave. “Expressive signals the future of PHP applications, composed of layered, single-purpose PSR-7 middleware.”</p>",
+                    title: "The McLaren 570GT MSO comes with added gold",
+                    body: @"Ladies and gents, meet the first McLaren 570GT to get the MSO treatment.
+                            That stands for McLaren Special Operations, if you need a reminder. 
+                            So what you’re seeing here is a 570 that’s just a little bit more, well, special than the rest.
+                            It may have ‘GT’ in its name, but the MSO team have decided it definitely needs more noise.
+                            So there’s a new titanium exhaust system, which is not only 30 per cent lighter than the stainless steel 
+                            item it replaces, but the provider of an “improved aural experience”, too. Good. Not content with titillating
+                            our ears, MSO is going for our eyes too. The new exhaust gets a set of new heat shields. That’s a more
+                            exciting addition than it sounds, for they are finished in a golden titanium nitride tint. It’s a superb 
+                            nod to a similar treatment in the old McLaren F1. And more superb yet given the shields change through blue
+                            and purple as they heat up and cool down.",
                     date: new DateTime(2016, 06, 30, 17, 36, 52),
                     authorUsername: "merry@gmail.com"
                 );
+                CreatePost(context,
+                   title: "Americans, this is your new Honda Civic",
+                   body: @"And it's being built in Britain. Don't say we never did anything for you. Welcome, Americans, to your brand-new Honda Civic hatchback. Built (probably very well) by the fine men, women and machines of Swindon, no less, it’ll arrive in dealers this ‘fall’. Whenever that is. Developed by Honda’s R&D teams in Europe and Japan, the new Civic promises much. The look is bold (identical to the show car we saw at this year’s Geneva Motor Show), and the handling is touted as ‘world-class’. In the US it’s available with just the one engine – a direct-injection 1.5-litre turbocharged four with up to 180bhp and 162lb ft – across five trim levels. When the new Civic eventually reaches Europe sometime next year, expect diesels and a little 1.0-litre triple. A new Type-R, this time also available in the US, will follow. Good. 
+",
+                   date: new DateTime(2016, 06, 30, 17, 36, 52),
+                   authorUsername: "merry@gmail.com"
+               );
+                CreatePost(context,
+                   title: "The best images from this month's Top Gear magazine",
+                   body: @"Road trips special: DB11 across Europe, GT-R in Iceland and Disco Volante Spyder in Italy.
+                        In the September issue of Top Gear magazine, we hit the road for our annual summer road trip adventures.
+                        After a, erm, ‘slightly strained’ few months with Europe, we turn cultural attaches, cross over the channel
+                        and take the new 600bhp Aston Martin DB11 for a 2,500-mile trip across the continent. As a perfect example
+                        of what the UK stands for in terms of design, creativity, engineering and technology, we find out if the
+                        new DB11 can smooth things over with our European neighbours.",
+                   date: new DateTime(2016, 06, 30, 17, 36, 52),
+                   authorUsername: "merry@gmail.com"
+               );
+
                 CreateGalleryCar(context,
-                    title: "Mercedes AMG",
-                    url: @" http://www.topgear.com/sites/default/files/styles/fit_1960x1102/public/images/news-article/carousel/2016/02/ff21a0e4ae2274ad672c3402bf360e46/7mercc43coupefeb16.jpg?itok=__MERSSW",
-                    description: null);
+                    title: "Mercedes SLS",
+                    url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/mercedesbenz-sls-amg-1.jpg",
+                    description: null,
+                    details: "<b>Engine:</b> 6.2 Liters, 571Hp</br> <b>Acceleration:</b> 0-100km/h: 3.7sec </br><b>Top speed:</b> 320 km/h");
+
                 CreateGalleryCar(context,
+                    title: "Chevrolet Camaro",
+                    url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/Chevrolet-Camaro-2.jpg",
+                    description: null,
+                    details: "Another </br>details.");
+                /*CreateGalleryCar(context,
                     title: "Alfa Romeo 4C Coupe",
                     url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/Alfa%20Romeo%204C.jpg",
                     description: null);
                 CreateGalleryCar(context,
-                    title: "BMW 5-Series",
-                    url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/BMW-5_series_F10_mp2_pic_70917.jpg",
+                    title: "Lexus LFA",
+                    url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/01-2011-lexus-lfa-review.jpg",
                     description: null);
                 CreateGalleryCar(context,
                     title: "Cadillac CTS 2017",
                     url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/Cadillac-CTS-079.jpg",
                     description: null);
                 CreateGalleryCar(context,
+                    title: "Maserati Quattroporte",
+                    url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/Maserati%20Quattroporte-GTS-GranLusso-front-three-quarter-in-motion-16.jpg",
+                    description: null);
+                CreateGalleryCar(context,
+                    title: "Mercedes E-Class",
+                    url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/Mercedes_W212_Facelift.jpg",
+                    description: null);
+                CreateGalleryCar(context,
+                    title: "BMW 5-Series",
+                    url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/BMW-5_series_F10_mp2_pic_70917.jpg",
+                    description: null);
+                CreateGalleryCar(context,
                     title: "Volov S90",
                     url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/volvo-s90-2016-front.jpg",
                     description: null);
                 CreateGalleryCar(context,
-                    title: "Mercedes SLS",
-                    url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/mercedesbenz-sls-amg-1.jpg",
+                    title: "BMW 6-Series",
+                    url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/BMW_6_Series_Gran_Coupe_Wallpaper_15_1600x12001.jpg",
                     description: null);
-
-
+                CreateGalleryCar(context,
+                    title: "Mazda 6",
+                    url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/Mazda-6-Wallpaper.jpg",
+                    description: null);
+                CreateGalleryCar(context,
+                    title: "Lexus GS-350",
+                    url: @" https://raw.githubusercontent.com/BoykoNedyalkov/Car-Blog-SoftUni/master/Views/GalleryCars/lexus-gs-350-6.jpg",
+                    description: null);*/
 
                 context.SaveChanges();
             }
@@ -189,12 +240,13 @@ namespace MVCBlog.Migrations
         }
 
         private void CreateGalleryCar(ApplicationDbContext context,
-            string title, string url, string description)
+            string title, string url, string description, string details)
         {
             var car = new GalleryCar();
             car.Title = title;
             car.URL = url;
             car.Description = description;
+            car.Details = details;
             context.GalleryCars.Add(car);
         }
     }
